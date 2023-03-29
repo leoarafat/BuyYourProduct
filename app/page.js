@@ -1,7 +1,12 @@
-export default function Home() {
-  return (
-    <main className="text-4xl font-semibold">
-      <h1>Hello World</h1>
-    </main>
-  );
-}
+import { ListProduct } from "@/components/products/ListProduct";
+import axios from "axios";
+
+const getProducts = async () => {
+  const { data } = await axios.get(`${process.env.API_URL}/api/products`);
+  return data;
+};
+const Home = async() => {
+  const productsData = await getProducts()
+  return <ListProduct productsData={productsData}/>;
+};
+export default Home;
