@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { BsChevronCompactRight } from 'react-icons/bs';
 
 const BreadCrumbs = ({ breadCrumbs }) => {
   return (
@@ -15,7 +16,7 @@ const BreadCrumbs = ({ breadCrumbs }) => {
                 {breadCrumb.name}
               </Link>
               {breadCrumbs?.length - 1 !== index && (
-                <i className="ml-3 text-gray-400 fa fa-chevron-right"></i>
+<BsChevronCompactRight/>
               )}
             </li>
           ))}
