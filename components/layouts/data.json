@@ -1,0 +1,24 @@
+{
+    "name": "Jabra Elite 85h",
+    "price": 350.95,
+    "description": "These headphones are a great option for those seeking strong noise-cancellation and long battery life (up to 36 hours). With a comfortable design and customizable sound options, you can tailor your audio experience to your preferences and enjoy immersive listening.",
+    "category": "Headphones",
+    "seller": "Beats by Foyez",
+    "stock": 500,
+    "images": [
+      {
+        "public_id": "buyitnow/products/yctoxcyccfgre439obdnvc",
+        "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1680264885/buyitnow/products/6335103cv11d_qkeoq3.jpg"
+      },
+      {
+        "public_id": "buyitnow/products/yctoxcbb8qgfghuoobnvfgc",
+        "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1680264885/buyitnow/products/Best-Bluetooth-Headphones-2019-abra-Elite-85h-Wireless-Noise-Canceling-Headphones_ccptia.jpg"
+      },
+      {
+        "public_id": "buyitnow/products/wbrj0ivavdqcvgd4jozzkeb531",
+        "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1680264885/buyitnow/products/elite_85h_titanium_01_iufwbl.png"
+      }
+    ],
+    "reviews": [],
+    "ratings": 2
+  }
