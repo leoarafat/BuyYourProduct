@@ -1,12 +1,23 @@
 "use client";
-import Image from "next/image";
-import { useRef } from "react";
+
+import { useRef, useContext } from "react";
 import StarRatings from "react-star-ratings";
 import BreadCrumbs from "../layouts/BreadCrumbs";
-
+import CartContext from "@/context/CartContext";
 export const ProductDetails = ({ product }) => {
-  const { name, category, description, price, ratings, seller, stock, images,_id } =
-    product;
+  const { addItemToCart } = useContext(CartContext);
+
+  const {
+    name,
+    category,
+    description,
+    price,
+    ratings,
+    seller,
+    stock,
+    images,
+    _id,
+  } = product;
   const imageRef = useRef(null);
   console.log(imageRef);
   const inStock = stock >= 1;
@@ -20,9 +31,22 @@ export const ProductDetails = ({ product }) => {
       url: `/products/${_id}`,
     },
   ];
+
+  const AddToCartItem = () => {
+    
+    addItemToCart({
+      product: product._id,
+      name: product.name,
+      price: product.price,
+      image: product.images[0].url,
+      stock: product.stock,
+      seller: product.seller,
+    });
+  };
+
   return (
     <>
-       <BreadCrumbs breadCrumbs={breadCrumbs} />
+      <BreadCrumbs breadCrumbs={breadCrumbs} />
       <section className="bg-white py-10">
         <div className="container max-w-screen-xl mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-5">
@@ -89,9 +113,13 @@ export const ProductDetails = ({ product }) => {
               <p className="mb-4 text-gray-500">{description}</p>
 
               <div className="flex flex-wrap gap-2 mb-5">
-                <button className="px-4 py-2 inline-block text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700">
+                <button
+                  onClick={AddToCartItem}
+                  disabled={!inStock}
+                  className="px-4 py-2 inline-block text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700"
+                >
                   <i className="fa fa-shopping-cart mr-2"></i>
-                  Add to cart
+                  Add to Cart
                 </button>
               </div>
 

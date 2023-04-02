@@ -1,8 +1,22 @@
+import CartContext from "@/context/CartContext";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
 import StarRatings from "react-star-ratings";
 
 const ProductItems = ({ product }) => {
+  const { addItemToCart } = useContext(CartContext);
+  const AddToCartItem = () => {
+    addItemToCart({
+      product: product._id,
+      name: product.name,
+      price: product.price,
+      image: product.images[0].url,
+      stock: product.stock,
+      seller: product.seller,
+    });
+    
+  };
   return (
     <div className="relative border border-gray-200 overflow-hidden bg-white shadow-md rounded mb-5">
       <div className="flex flex-col md:flex-row">
@@ -50,7 +64,10 @@ const ProductItems = ({ product }) => {
             <span className="text-2xl font-bold text-black">
               ${product?.price}
             </span>
-            <button className="px-4 py-2 inline-block text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 cursor-pointer">
+            <button
+              onClick={AddToCartItem}
+              className="px-4 py-2 inline-block text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700 cursor-pointer"
+            >
               Add to Cart
             </button>
           </div>
