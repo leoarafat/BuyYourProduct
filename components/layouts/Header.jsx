@@ -24,8 +24,7 @@ const Header = () => {
               />
             </a>
           </div>
-          <Search />
-
+          <Search/>
           <div className="flex items-center space-x-2 ml-auto">
             <Link
               href="/cart"
