@@ -5,7 +5,8 @@ const nextConfig = {
   },
   env:{
     API_URL: "http://localhost:3000",
-    DB_URI: "mongodb://localhost:27017/buyProduct"
+    DB_URI: "mongodb://localhost:27017/buyProduct",
+    NEXTAUTH_SECRET: "arafatpurnimaritumahiandothers"
   },
   images:{
     domains: ["res.cloudinary.com"]
