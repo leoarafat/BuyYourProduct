@@ -5,29 +5,13 @@ import Link from "next/link";
 import React from "react";
 
 const Sidebar = () => {
-  const [showSidebar, setShowSidebar] = useState(false);
-
-  const toggleSidebar = () => {
-    setShowSidebar(!showSidebar);
-  };
   const logoutHandler = () => {
     signOut();
   };
 
   return (
-   <>
-    <div className="md:hidden">
-    <button
-      className="text-gray-800 hover:text-blue-500 focus:outline-none"
-      onClick={toggleSidebar}
-    >
-      {showSidebar ? <FaTimes /> : <FaBars />}
-    </button>
-  </div>
-  
-  <div className={`md:block ${showSidebar ? "block" : "hidden"}`}>
-  <aside className="md:w-1/3 lg:w-1/4 px-4">
-      <ul className="sidebar rounded-md shadow-lg">
+    <aside className="md:w-1/3 lg:w-1/4 px-4">
+      <ul className="sidebar">
         <>
           <li>
             {" "}
@@ -109,7 +93,7 @@ const Sidebar = () => {
           </Link>
         </li>
 
-        <li className="mt-4">
+        <li>
           {" "}
           <a
             className="block px-3 py-2 text-red-800 hover:bg-red-100 hover:text-white-500 rounded-md cursor-pointer"
@@ -120,8 +104,6 @@ const Sidebar = () => {
         </li>
       </ul>
     </aside>
-  </div>
-   </>
   );
 };
 
