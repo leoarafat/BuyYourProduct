@@ -1,10 +1,8 @@
 "use client";
 
-
-import AuthContext from "@/context/AuthContext";
 import Link from "next/link";
 import React, { useState, useContext, useEffect } from "react";
-
+import AuthContext from "@/context/AuthContext";
 import { toast } from "react-toastify";
 
 const Register = () => {

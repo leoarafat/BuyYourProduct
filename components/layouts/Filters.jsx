@@ -166,12 +166,12 @@ const Filters = () => {
               <input
                 name="category"
                 type="checkbox"
-                value="Headphones"
+                value="Beauty"
                 className="h-4 w-4"
-                defaultChecked={checkHandler("category", "Headphones")}
+                defaultChecked={checkHandler("category", "Beauty")}
                 onClick={(e) => handleClick(e.target)}
               />
-              <span className="ml-2 text-gray-500"> Headphones </span>
+              <span className="ml-2 text-gray-500"> Beauty </span>
             </label>
           </li>
         </ul>
@@ -194,7 +194,7 @@ const Filters = () => {
                 <span className="ml-2 text-gray-500">
                   {" "}
                   <StarRatings
-                    rating={5}
+                    rating={rating}
                     starRatedColor="#ffb829"
                     numberOfStars={5}
                     starDimension="20px"

@@ -1,11 +1,12 @@
 "use client";
-import CustomPagination from "../layouts/CustomPaigination";
+
+import React from "react";
+import CustomPagination from "../layouts/CustomPagination";
 import Filters from "../layouts/Filters";
-import ProductItems from "./ProductItems";
 
+import ProductItem from "./ProductItem";
 
-export const ListProduct = ({ productsData }) => {
-  console.log(productsData);
+const ListProducts = ({ data }) => {
   return (
     <section className="py-12">
       <div className="container max-w-screen-xl mx-auto px-4">
@@ -13,13 +14,19 @@ export const ListProduct = ({ productsData }) => {
           <Filters />
 
           <main className="md:w-2/3 lg:w-3/4 px-3">
-            {productsData?.products?.map((product) => (
-              <ProductItems key={product?._id} product={product} />
+            {data?.products?.map((product) => (
+              <ProductItem key={product?._id} product={product} />
             ))}
-            <CustomPagination resPerPage={productsData?.resPerPage} productsCount={productsData?.filteredProductsCount}/>
+
+            <CustomPagination
+              resPerPage={data?.resPerPage}
+              productsCount={data?.filteredProductsCount}
+            />
           </main>
         </div>
       </div>
     </section>
   );
 };
+
+export default ListProducts;

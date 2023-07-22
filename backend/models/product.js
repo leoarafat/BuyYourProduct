@@ -1,4 +1,4 @@
-const { mongoose } = require("mongoose");
+import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
   name: {
@@ -15,7 +15,7 @@ const productSchema = new mongoose.Schema({
   },
   images: [
     {
-      publicId: {
+      public_id: {
         type: String,
       },
       url: {
@@ -23,6 +23,7 @@ const productSchema = new mongoose.Schema({
       },
     },
   ],
+
   category: {
     type: String,
     required: [true, "Please enter product category"],
@@ -52,13 +53,18 @@ const productSchema = new mongoose.Schema({
   },
   reviews: [
     {
-      ratings: {
+      user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
+      },
+      rating: {
         type: Number,
         required: true,
       },
-      comments: {
+      comment: {
         type: String,
-        required: [true, "Please added a comment"],
+        required: true,
       },
       createdAt: {
         type: Date,
@@ -66,10 +72,16 @@ const productSchema = new mongoose.Schema({
       },
     },
   ],
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: false,
+  },
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
+
 export default mongoose.models.Product ||
   mongoose.model("Product", productSchema);

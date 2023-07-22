@@ -5,7 +5,6 @@ import User from "@/backend/models/user";
 import bcrypt from "bcryptjs";
 import dbConnect from "@/backend/config/dbConnect";
 
-
 export default async function auth(req, res) {
   return await NextAuth(req, res, {
     session: {
@@ -40,6 +39,13 @@ export default async function auth(req, res) {
     callbacks: {
       jwt: async ({ token, user }) => {
         user && (token.user = user);
+
+        if (req.url === "/api/auth/session?update") {
+          // hit the db and eturn the updated user
+
+          const updatedUser = await User.findById(token.user._id);
+          token.user = updatedUser;
+        }
 
         return token;
       },

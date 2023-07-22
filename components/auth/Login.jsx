@@ -14,6 +14,7 @@ const Login = () => {
   const router = useRouter();
   const params = useSearchParams();
   const callBackUrl = params.get("callbackUrl");
+
   const submitHandler = async (e) => {
     e.preventDefault();
 

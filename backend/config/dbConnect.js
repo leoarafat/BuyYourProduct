@@ -1,10 +1,33 @@
+// import mongoose from "mongoose";
+
+// const dbConnect = () => {
+//   if (mongoose.connection.readyState >= 1) {
+//     return;
+//   }
+
+//   mongoose.set("strictQuery", false);
+//   mongoose.connect(process.env.DB_URI);
+// };
+
+// export default dbConnect;
+// dbConnect.js
 import mongoose from "mongoose";
 
-const dbConnect = () => {
+const dbConnect = async () => {
   if (mongoose.connection.readyState >= 1) {
     return;
   }
+
   mongoose.set("strictQuery", false);
-  mongoose.connect(process.env.DB_URI);
+  try {
+    await mongoose.connect(process.env.DB_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log("MongoDB connected successfully");
+  } catch (error) {
+    console.error("Error connecting to MongoDB:", error.message);
+  }
 };
+
 export default dbConnect;
