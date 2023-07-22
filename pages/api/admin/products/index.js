@@ -1,4 +1,4 @@
-import nc from "next-connect";
+import { createRouter } from "next-connect";
 import dbConnect from "@/backend/config/dbConnect";
 import onError from "@/backend/middlewares/errors";
 import {
@@ -7,10 +7,10 @@ import {
 } from "@/backend/middlewares/auth";
 import { newProduct } from "@/backend/controllers/productControllers";
 
-const handler = nc({ onError });
+const router = createRouter();
 
 dbConnect();
 
-handler.use(isAuthenticatedUser, authorizeRoles("admin")).post(newProduct);
+router.use(isAuthenticatedUser, authorizeRoles("admin")).post(newProduct);
 
-export default handler;
+export default router.handler({ onError });

@@ -1,4 +1,4 @@
-import nc from "next-connect";
+import { createRouter } from "next-connect";
 import dbConnect from "@/backend/config/dbConnect";
 import onError from "@/backend/middlewares/errors";
 import {
@@ -11,12 +11,12 @@ import {
   updateOrder,
 } from "@/backend/controllers/orderControllers";
 
-const handler = nc({ onError });
+const router = createRouter();
 
 dbConnect();
 
-handler.use(isAuthenticatedUser, authorizeRoles("admin")).get(getOrder);
-handler.use(isAuthenticatedUser, authorizeRoles("admin")).put(updateOrder);
-handler.use(isAuthenticatedUser, authorizeRoles("admin")).delete(deleteOrder);
+router.use(isAuthenticatedUser, authorizeRoles("admin")).get(getOrder);
+router.use(isAuthenticatedUser, authorizeRoles("admin")).put(updateOrder);
+router.use(isAuthenticatedUser, authorizeRoles("admin")).delete(deleteOrder);
 
-export default handler;
+export default router.handler({ onError });

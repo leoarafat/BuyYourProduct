@@ -1,4 +1,4 @@
-import nc from "next-connect";
+import { createRouter } from "next-connect";
 import dbConnect from "@/backend/config/dbConnect";
 import {
   getAddresses,
@@ -8,11 +8,11 @@ import { isAuthenticatedUser } from "@/backend/middlewares/auth";
 
 import onError from "@/backend/middlewares/errors";
 
-const handler = nc({ onError });
+const router = createRouter();
 
 dbConnect();
 
-handler.use(isAuthenticatedUser).get(getAddresses);
-handler.use(isAuthenticatedUser).post(newAddress);
+router.use(isAuthenticatedUser).get(getAddresses);
+router.use(isAuthenticatedUser).post(newAddress);
 
-export default handler;
+export default router.handler({ onError });
