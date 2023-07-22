@@ -1,9 +1,9 @@
-import nc from "next-connect";
+import { createRouter } from "next-connect";
 import dbConnect from "@/backend/config/dbConnect";
 import onError from "@/backend/middlewares/errors";
 import { webhook } from "@/backend/controllers/orderControllers";
 
-const handler = nc({ onError });
+const router = createRouter();
 
 dbConnect();
 
@@ -13,6 +13,6 @@ export const config = {
   },
 };
 
-handler.post(webhook);
+router.post(webhook);
 
-export default handler;
+export default router.handler({ onError });

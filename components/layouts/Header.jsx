@@ -1,5 +1,12 @@
 "use client";
 
+import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
+
+import Badge from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
 import React, { useContext, useEffect } from "react";
 import Link from "next/link";
 import Search from "./Search";
@@ -7,6 +14,7 @@ import Image from "next/image";
 import CartContext from "@/context/CartContext";
 import { useSession } from "next-auth/react";
 import AuthContext from "@/context/AuthContext";
+import { Button } from "@mui/material";
 
 const Header = () => {
   const { user, setUser } = useContext(AuthContext);
@@ -21,7 +29,14 @@ const Header = () => {
 
   const { cart } = useContext(CartContext);
   const cartItems = cart?.cartItems;
-
+  const StyledBadge = styled(Badge)(({ theme }) => ({
+    "& .MuiBadge-badge": {
+      right: -3,
+      top: 13,
+      border: `2px solid ${theme.palette.background.paper}`,
+      padding: "0 4px",
+    },
+  }));
   return (
     <header className="bg-white py-2 border-b">
       <div className="container max-w-screen-xl mx-auto px-4">
@@ -37,23 +52,31 @@ const Header = () => {
             </a>
           </div>
           <Search />
-
+          <Link className="ml-2" href="/all-products">
+            <Button variant="outlined" href="#outlined-buttons">
+              Products
+            </Button>
+          </Link>
           <div className="flex items-center space-x-2 ml-auto">
             <Link
               href="/cart"
               className="px-3 py-2 inline-block text-center text-gray-700 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 hover:border-gray-300"
             >
-              <i className="text-gray-400 w-5 fa fa-shopping-cart"></i>
-              <span className="hidden lg:inline ml-1">
-                Cart (<b>{cartItems?.length || 0}</b>)
-              </span>
+              <IconButton aria-label="cart">
+                <StyledBadge
+                  badgeContent={cartItems?.length || 0}
+                  color="secondary"
+                >
+                  <ShoppingCartIcon />
+                </StyledBadge>
+              </IconButton>
             </Link>
             {!user ? (
               <Link
                 href="/login"
                 className="px-3 py-2 inline-block text-center text-gray-700 bg-white shadow-sm border border-gray-200 rounded-md hover:bg-gray-100 hover:border-gray-300"
               >
-                <i className="text-gray-400 w-5 fa fa-user"></i>
+                <LoginOutlinedIcon />
                 <span className="hidden lg:inline ml-1">Sign in</span>
               </Link>
             ) : (
