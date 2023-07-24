@@ -3,144 +3,183 @@ import Stripe from "stripe";
 import Order from "../models/order";
 import APIFilters from "../utils/APIFilters";
 import ErrorHandler from "../utils/errorHandler";
+import fs from "fs"; // Import the fs module for file handling
+import User from "../models/user"; // Import the User model
+import { uploads } from "../utils/cloudinary"; // Import the cloudinary upload function
+
 const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY);
 
 export const getOrders = async (req, res) => {
-  const resPerPage = 2;
-  const ordersCount = await Order.countDocuments();
+  try {
+    const resPerPage = 2;
+    const ordersCount = await Order.countDocuments();
 
-  const apiFilters = new APIFilters(Order.find(), req.query).pagination(
-    resPerPage
-  );
+    const apiFilters = new APIFilters(Order.find(), req.query).pagination(
+      resPerPage
+    );
 
-  const orders = await apiFilters.query.find().populate("shippingInfo user");
+    const orders = await apiFilters.query.find().populate("shippingInfo user");
 
-  res.status(200).json({
-    ordersCount,
-    resPerPage,
-    orders,
-  });
+    res.status(200).json({
+      ordersCount,
+      resPerPage,
+      orders,
+    });
+  } catch (error) {
+    console.error("Error fetching orders:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 };
 
-export const getOrder = async (req, res) => {
-  const order = await Order.findById(req.query.id).populate(
-    "shippingInfo user"
-  );
+export const getOrder = async (req, res, next) => {
+  try {
+    const order = await Order.findById(req.query.id).populate(
+      "shippingInfo user"
+    );
 
-  if (!order) {
-    return next(new ErrorHandler("No Order found with this ID", 404));
+    if (!order) {
+      return next(new ErrorHandler("No Order found with this ID", 404));
+    }
+
+    res.status(200).json({
+      order,
+    });
+  } catch (error) {
+    console.error("Error fetching order:", error);
+    next(new ErrorHandler("No Order found with this ID", 404));
   }
-
-  res.status(200).json({
-    order,
-  });
 };
 
 export const myOrders = async (req, res) => {
-  const resPerPage = 2;
-  const ordersCount = await Order.countDocuments();
+  try {
+    const resPerPage = 2;
+    const ordersCount = await Order.countDocuments();
 
-  const apiFilters = new APIFilters(Order.find(), req.query).pagination(
-    resPerPage
-  );
+    const apiFilters = new APIFilters(Order.find(), req.query).pagination(
+      resPerPage
+    );
 
-  const orders = await apiFilters.query
-    .find({ user: req.user._id })
-    .populate("shippingInfo user");
+    const orders = await apiFilters.query
+      .find({ user: req.user._id })
+      .populate("shippingInfo user");
 
-  res.status(200).json({
-    ordersCount,
-    resPerPage,
-    orders,
-  });
+    res.status(200).json({
+      ordersCount,
+      resPerPage,
+      orders,
+    });
+  } catch (error) {
+    console.error("Error fetching user's orders:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 };
 
-export const updateOrder = async (req, res) => {
-  let order = await Order.findById(req.query.id);
+export const updateOrder = async (req, res, next) => {
+  try {
+    let order = await Order.findById(req.query.id);
 
-  if (!order) {
-    return next(new ErrorHandler("No Order found with this ID", 404));
+    if (!order) {
+      return next(new ErrorHandler("No Order found with this ID", 404));
+    }
+
+    order = await Order.findByIdAndUpdate(req.query.id, {
+      orderStatus: req.body.orderStatus,
+    });
+
+    res.status(200).json({
+      success: true,
+      order,
+    });
+  } catch (error) {
+    console.error("Error updating order:", error);
+    next(new ErrorHandler("No Order found with this ID", 404));
   }
-
-  order = await Order.findByIdAndUpdate(req.query.id, {
-    orderStatus: req.body.orderStatus,
-  });
-
-  res.status(200).json({
-    success: true,
-    order,
-  });
 };
 
-export const deleteOrder = async (req, res) => {
-  let order = await Order.findById(req.query.id);
+export const deleteOrder = async (req, res, next) => {
+  try {
+    let order = await Order.findById(req.query.id);
 
-  if (!order) {
-    return next(new ErrorHandler("No Order found with this ID", 404));
+    if (!order) {
+      return next(new ErrorHandler("No Order found with this ID", 404));
+    }
+
+    await order.deleteOne();
+
+    res.status(200).json({
+      success: true,
+    });
+  } catch (error) {
+    console.error("Error deleting order:", error);
+    next(new ErrorHandler("No Order found with this ID", 404));
   }
-
-  await order.deleteOne();
-
-  res.status(200).json({
-    success: true,
-  });
 };
 
 export const canReview = async (req, res) => {
-  const productId = req.query.productId;
+  try {
+    const productId = req.query.productId;
 
-  const orders = await Order.find({
-    user: req?.user?._id,
-    "orderItems.product": productId,
-  });
+    const orders = await Order.find({
+      user: req?.user?._id,
+      "orderItems.product": productId,
+    });
 
-  let canReview = orders?.length >= 1 ? true : false;
+    let canReview = orders?.length >= 1 ? true : false;
 
-  res.status(200).json({
-    canReview,
-  });
+    res.status(200).json({
+      canReview,
+    });
+  } catch (error) {
+    console.error("Error checking if the user can review:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 };
 
 export const checkoutSession = async (req, res) => {
-  const body = req.body;
+  try {
+    const body = req.body;
 
-  const line_items = body?.items?.map((item) => {
-    return {
-      price_data: {
-        currency: "usd",
-        product_data: {
-          name: item.name,
-          images: [item.image],
-          metadata: { productId: item.product },
+    const line_items = body?.items?.map((item) => {
+      return {
+        price_data: {
+          currency: "usd",
+          product_data: {
+            name: item.name,
+            images: [item.image],
+            metadata: { productId: item.product },
+          },
+          unit_amount: item.price * 100,
         },
-        unit_amount: item.price * 100,
-      },
-      tax_rates: ["txr_1MUVJSAlHMiRMt8E2khIxJEi"],
-      quantity: item.quantity,
-    };
-  });
+        tax_rates: ["txr_1NWjiBDhs9jrqdoDcIEqd6Ez"],
+        quantity: item.quantity,
+      };
+    });
 
-  const shippingInfo = body?.shippingInfo;
+    const shippingInfo = body?.shippingInfo;
 
-  const session = await stripe.checkout.sessions.create({
-    payment_method_types: ["card"],
-    success_url: `${process.env.API_URL}/me/orders?order_success=true`,
-    cancel_url: `${process.env.API_URL}`,
-    customer_email: req?.user?.email,
-    client_reference_id: req?.user?._id,
-    mode: "payment",
-    metadata: { shippingInfo },
-    shipping_options: [
-      {
-        shipping_rate: "shr_1MUVKxAlHMiRMt8EmUp4SKxz",
-      },
-    ],
-    line_items,
-  });
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      success_url: `${process.env.API_URL}/me/orders?order_success=true`,
+      cancel_url: `${process.env.API_URL}`,
+      customer_email: req?.user?.email,
+      client_reference_id: req?.user?._id,
+      mode: "payment",
+      metadata: { shippingInfo },
+      shipping_options: [
+        {
+          shipping_rate: "shr_1NWXJtDhs9jrqdoDg67WlIdM",
+        },
+      ],
+      line_items,
+    });
 
-  res.status(200).json({
-    url: session.url,
-  });
+    res.status(200).json({
+      url: session.url,
+    });
+  } catch (error) {
+    console.error("Error creating checkout session:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 };
 
 async function getCartItems(line_items) {
@@ -206,6 +245,7 @@ export const webhook = async (req, res) => {
       res.status(201).json({ success: true });
     }
   } catch (error) {
-    console.log(error);
+    console.error("Error processing webhook event:", error);
+    res.status(500).json({ message: "Internal Server Error" });
   }
 };

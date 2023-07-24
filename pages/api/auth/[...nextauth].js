@@ -20,7 +20,7 @@ export default async function auth(req, res) {
           const user = await User.findOne({ email }).select("+password");
 
           if (!user) {
-            throw new Error("Invalid Email or Password");
+            throw new Error("User dose not exist");
           }
 
           const isPasswordMatched = await bcrypt.compare(
@@ -29,7 +29,7 @@ export default async function auth(req, res) {
           );
 
           if (!isPasswordMatched) {
-            throw new Error("Invalid Email or Password");
+            throw new Error("Password or Email is incorrect");
           }
 
           return user;

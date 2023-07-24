@@ -3,7 +3,7 @@
 import AuthContext from "@/context/AuthContext";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 const Sidebar = () => {
   const { user } = useContext(AuthContext);
@@ -11,7 +11,9 @@ const Sidebar = () => {
   const logoutHandler = () => {
     signOut();
   };
-
+  useEffect(() => {
+    localStorage.setItem("previousUrl", window.location.href);
+  }, [logoutHandler]);
   return (
     <aside className="md:w-1/3 lg:w-1/4 px-4">
       <ul className="sidebar">

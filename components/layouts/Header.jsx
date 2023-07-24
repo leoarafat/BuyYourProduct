@@ -52,9 +52,6 @@ const Header = () => {
             </a>
           </div>
           <Search />
-          <Link className="ml-2" href="/all-products">
-            <Button variant="outlined">Products</Button>
-          </Link>
           <div className="flex items-center space-x-2 ml-auto">
             <Link
               href="/cart"
