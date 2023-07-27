@@ -13,12 +13,13 @@ import {
   ListItemIcon,
   ListItemText,
   Badge,
+  Avatar,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
-import InfoIcon from "@mui/icons-material/Info";
+
 import CategoryIcon from "@mui/icons-material/Category";
 import LoginIcon from "@mui/icons-material/Login";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -63,7 +64,6 @@ const Navbar = () => {
 
   const navItems = [
     { text: "Home", icon: <HomeIcon />, path: "/" },
-    { text: "About", icon: <InfoIcon />, path: "/about" },
     { text: "Products", icon: <CategoryIcon />, path: "/all-products" },
   ];
 
@@ -84,7 +84,7 @@ const Navbar = () => {
           ) : (
             <>
               <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                Your Company
+                <Link href={"/"}>TechTrove</Link>
               </Typography>
               <List
                 component="nav"
@@ -100,8 +100,8 @@ const Navbar = () => {
                   </Link>
                 ))}
               </List>
-              {/* Move the Login and Logout buttons outside the isLg condition */}
-              {(isSm || !user) && ( // Update the condition to isSm
+
+              {(isSm || !user) && (
                 <Link href="/login">
                   <Button color="inherit">
                     <LoginIcon />
@@ -114,6 +114,16 @@ const Navbar = () => {
                   <LogoutIcon />
                   Logout
                 </Button>
+              )}
+              {user && (
+                <Link href="/me">
+                  <img
+                    className="w-10 h-10 rounded-full"
+                    src={
+                      user?.avatar ? user?.avatar?.url : "/images/default.png"
+                    }
+                  />
+                </Link>
               )}
             </>
           )}

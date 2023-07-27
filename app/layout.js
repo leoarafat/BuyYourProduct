@@ -1,5 +1,5 @@
 // import Navbar from "@/components/layouts/Navbar";
-import Header from "@/components/layouts/Header";
+
 import { GlobalProvider } from "./GlobalProvider";
 import "./globals.css";
 import dynamic from "next/dynamic";
@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <GlobalProvider>
           <Navbar />
-          {/* <Header /> */}
+
           {children}
         </GlobalProvider>
       </body>
