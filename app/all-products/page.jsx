@@ -6,7 +6,7 @@ import ListProducts from "@/components/products/ListProduct";
 import Header from "@/components/layouts/Header";
 
 export const metadata = {
-  title: "Next.js 13 Ecommerce App",
+  title: "TechTrove",
 };
 
 const getProducts = async (searchParams) => {

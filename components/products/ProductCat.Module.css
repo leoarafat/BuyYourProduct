@@ -1,0 +1,20 @@
+/* ProductCategory.css */
+
+/* CSS for the card hover effect */
+.Card-root {
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.Card-media {
+  transition: opacity 0.3s ease;
+}
+
+.Card-root:hover {
+  transform: scale(1.05); /* Increase the card size on hover */
+}
+
+.Card-media:hover {
+  opacity: 0.8; /* Reduce image opacity on hover */
+}
