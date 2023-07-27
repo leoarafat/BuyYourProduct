@@ -12,9 +12,9 @@ const Search = () => {
     e.preventDefault();
 
     if (keyword) {
-      router.push(`/?keyword=${keyword}`);
+      router.push(`all-products/?keyword=${keyword}`);
     } else {
-      router.push("/");
+      router.push("/all-products");
     }
   };
 
@@ -33,7 +33,7 @@ const Search = () => {
       />
       <button
         type="button"
-        className="px-4 py-2 inline-block text-white border border-transparent bg-blue-600 text-white rounded-md hover:bg-blue-700"
+        className="px-4 py-2 inline-block text-white border border-transparent bg-blue-600  rounded-md hover:bg-blue-700"
         onClick={submitHandler}
       >
         Search
