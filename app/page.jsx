@@ -3,6 +3,7 @@ import axios from "axios";
 
 import queryString from "query-string";
 import ListProducts from "@/components/products/ListProduct";
+import Header from "@/components/layouts/Header";
 
 export const metadata = {
   title: "Next.js 13 Ecommerce App",
@@ -30,7 +31,12 @@ const getProducts = async (searchParams) => {
 const HomePage = async ({ searchParams }) => {
   const productsData = await getProducts(searchParams);
 
-  return <ListProducts data={productsData} />;
+  return (
+    <>
+      <Header />
+      <ListProducts data={productsData} />
+    </>
+  );
 };
 
 export default HomePage;

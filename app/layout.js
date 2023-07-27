@@ -1,6 +1,10 @@
-import Header from "@/components/layouts/Header";
+// import Navbar from "@/components/layouts/Navbar";
 import { GlobalProvider } from "./GlobalProvider";
 import "./globals.css";
+import dynamic from "next/dynamic";
+const Navbar = dynamic(() => import("@/components/layouts/Navbar"), {
+  ssr: false,
+});
 
 export default function RootLayout({ children }) {
   return (
@@ -8,7 +12,7 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <GlobalProvider>
-          <Header />
+          <Navbar />
           {children}
         </GlobalProvider>
       </body>
