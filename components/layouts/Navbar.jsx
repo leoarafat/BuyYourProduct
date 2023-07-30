@@ -13,7 +13,6 @@ import {
   ListItemIcon,
   ListItemText,
   Badge,
-  Avatar,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
@@ -37,7 +36,7 @@ const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isXs = useMediaQuery(theme.breakpoints.down("xs"));
-  const isSm = useMediaQuery(theme.breakpoints.between("sm", "md"));
+  const isSm = useMediaQuery(theme.breakpoints.between("xs", "sm", "md"));
   const isLg = useMediaQuery(theme.breakpoints.up("lg"));
 
   const toggleDrawer = (open) => (event) => {
@@ -65,6 +64,7 @@ const Navbar = () => {
   const navItems = [
     { text: "Home", icon: <HomeIcon />, path: "/" },
     { text: "Products", icon: <CategoryIcon />, path: "/all-products" },
+    { text: "Login", icon: <LoginIcon />, path: "/login" },
   ];
 
   return (
