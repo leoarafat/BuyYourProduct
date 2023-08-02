@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { createContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 const CartContext = createContext();
 
@@ -51,8 +52,10 @@ export const CartProvider = ({ children }) => {
       newCartItems = cart?.cartItems?.map((i) =>
         i.product === isItemExist.product ? item : i
       );
+      toast.error("Already Added");
     } else {
       newCartItems = [...(cart?.cartItems || []), item];
+      toast.success("Product Added");
     }
 
     localStorage.setItem("cart", JSON.stringify({ cartItems: newCartItems }));

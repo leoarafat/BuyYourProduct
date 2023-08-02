@@ -1,0 +1,698 @@
+[
+    {
+        "name": "iPhone 13 Pro",
+        "price": 1099,
+        "description": "The iPhone 13 Pro features a 6.1-inch Super Retina XDR display, A15 Bionic chip, and a triple-camera system for stunning photos and videos.",
+        "category": "Electronics",
+        "seller": "Apple Inc.",
+        "stock": 100,
+        "ratings": 3.5,
+        "images": [
+            {
+                "public_id": "buyitnow/products/iphone13pro_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718586/buyitnow/electronics/thai-nguyen-xMG5dm6l89k-unsplash_pbd69i.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/iphone13pro_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718586/buyitnow/electronics/howard-bouchevereau-qJZqXSBr7_s-unsplash_qvova0.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/iphone13pro_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718586/buyitnow/electronics/howard-bouchevereau-qJZqXSBr7_s-unsplash_qvova0.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Sony Alpha 7 III Mirrorless Camera",
+        "price": 1999,
+        "description": "The Sony Alpha 7 III is a full-frame mirrorless camera with a 24MP sensor, 4K video recording, and advanced autofocus capabilities.",
+        "category": "Electronics",
+        "seller": "Sony Corporation",
+        "stock": 50,
+        "ratings": 4.5,
+        "images": [
+            {
+                "public_id": "buyitnow/products/sonyalpha7iii_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718490/buyitnow/camera/allef-vinicius-iCO1OGHlb10-unsplash_xrctbn.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/sonyalpha7iii_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718490/buyitnow/camera/ali-abdullah-06BZAPrwuEc-unsplash_voaivk.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/sonyalpha7iii_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718489/buyitnow/camera/canon-eos-r6-header1-1920x1014_sc1uvl.webp"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Samsung QLED Q90R 4K TV (65-inch)",
+        "price": 2499,
+        "description": "The Samsung QLED Q90R TV offers a 65-inch 4K display, Quantum HDR 16X, and impressive color accuracy for a cinematic viewing experience.",
+        "category": "Electronics",
+        "seller": "Samsung Electronics",
+        "stock": 30,
+        "ratings": 3,
+        "images": [
+            {
+                "public_id": "buyitnow/products/samsungqledq90r_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690972877/buyitnow/electronics/01_Q90T_Front2_Black-GalleryCuts_rlon9s.webp"
+            },
+            {
+                "public_id": "buyitnow/products/samsungqledq90r_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690972876/buyitnow/electronics/images_leuaix.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/samsungqledq90r_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690972876/buyitnow/electronics/images_leuaix.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Canon EOS R6 Mirrorless Camera",
+        "price": 2399,
+        "description": "The Canon EOS R6 is a versatile mirrorless camera with a 20.1MP sensor, 4K video recording, and advanced image stabilization.",
+        "category": "Electronics",
+        "seller": "Canon Inc.",
+        "stock": 25,
+        "ratings": 3.5,
+        "images": [
+            {
+                "public_id": "buyitnow/products/canoneosr6_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718488/buyitnow/camera/Canon-EOS-R6-lead-01_rjocjp.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/canoneosr6_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718491/buyitnow/camera/sebastian-pichler-MDGpwpMY2Ws-unsplash_fe3dh8.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/canoneosr6_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718488/buyitnow/camera/Canon-EOS-R6-3_wpek9y.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Bose QuietComfort 45 Wireless Headphones",
+        "price": 349.95,
+        "description": "The Bose QuietComfort 45 headphones offer excellent noise-canceling, up to 24 hours of battery life, and premium sound quality for an immersive listening experience.",
+        "category": "Electronics",
+        "seller": "Bose Corporation",
+        "stock": 60,
+        "ratings": 4,
+        "images": [
+            {
+                "public_id": "buyitnow/products/boseqc45_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1680264442/buyitnow/products/81_jNVOUsJL_sa71d5.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/boseqc45_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1680264623/buyitnow/products/818-IGwCTjL_hvwe3e.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/boseqc45_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1680264623/buyitnow/products/MOMENTUM_3_Wireless_Black_Sandy_White_Product_Sennheiser_3_1200x1200_shfp9l.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Dell XPS 15 (2023 Model)",
+        "price": 1599.99,
+        "description": "The Dell XPS 15 is a high-performance laptop with a 15.6-inch InfinityEdge display, Intel Core i9 processor, and dedicated NVIDIA GTX graphics.",
+        "category": "Laptops",
+        "seller": "Dell Technologies",
+        "stock": 40,
+        "ratings": 4.0,
+        "images": [
+            {
+                "public_id": "buyitnow/products/dellxps15_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718423/buyitnow/laptops/download_1_ljak4v.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/dellxps15_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718423/buyitnow/laptops/download_2_zbybmn.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/dellxps15_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718424/buyitnow/laptops/images_bk4deb.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "MacBook Pro 14 (2023 Model)",
+        "price": 1899,
+        "description": "The MacBook Pro 14 is a professional-grade laptop with an M1X chip, Liquid Retina XDR display, and enhanced MagSafe technology.",
+        "category": "Laptops",
+        "seller": "Apple Inc.",
+        "stock": 35,
+        "ratings": 4,
+        "images": [
+            {
+                "public_id": "buyitnow/products/macbookpro14_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718425/buyitnow/laptops/download_4_aqxuco.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/macbookpro14_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718425/buyitnow/laptops/dmitry-spravko-tl56qAl9STg-unsplash_ajj35h.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/macbookpro14_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718426/buyitnow/laptops/thai-nguyen-ylqeFa_-PvA-unsplash_m19sny.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Lenovo ThinkPad P1 Gen 4",
+        "price": 1799,
+        "description": "The Lenovo ThinkPad P1 Gen 4 is a mobile workstation with a 15.6-inch 4K display, Intel Core i7 processor, and NVIDIA RTX graphics.",
+        "category": "Laptops",
+        "seller": "Lenovo Group Limited",
+        "stock": 30,
+        "ratings": 3,
+        "images": [
+            {
+                "public_id": "buyitnow/products/lenovothinkpadp1_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718424/buyitnow/laptops/dell-xps-15-2023-2_nojugv.webp"
+            },
+            {
+                "public_id": "buyitnow/products/lenovothinkpadp1_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718424/buyitnow/laptops/design-medium_quirqu.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/lenovothinkpadp1_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718425/buyitnow/laptops/c2VydmljZT1pbWFnZXMmc3JjPWh0dHBzJTNBJTJGJTJGY29tcHV0ZXJtYW5pYS5jb20uYmQlMkZ3cC1jb250ZW50JTJGdXBsb2FkcyUyRkRlbGwtWFBTLTE1LTMtMy5qcGcmY2FjaGVNYXJrZXI9MTY4NTUxNDExMy00MjY1OSZ0b2tlbj1hZWM_929c3389-80b5-4eeb-8665-51d5d3746_gqkyfk.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "ASUS ZenBook Pro Duo UX582",
+        "price": 1999,
+        "description": "The ASUS ZenBook Pro Duo UX582 is a dual-screen laptop with a 15.6-inch 4K OLED display and a secondary 14-inch ScreenPad Plus.",
+        "category": "Laptops",
+        "seller": "ASUSTek Computer Inc.",
+        "stock": 20,
+        "ratings": 4.5,
+        "images": [
+            {
+                "public_id": "buyitnow/products/asuszenbookpro_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718426/buyitnow/laptops/maxresdefault_vgtn2z.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/asuszenbookpro_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718426/buyitnow/laptops/download_3_ltrhze.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/asuszenbookpro_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718425/buyitnow/laptops/csm_HP_ENVY_14_HP_Enhanced_Lighting_feature_6012d1f93e_v6arts.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "HP Envy 14",
+        "price": 1499,
+        "description": "The HP Envy 14 is a stylish and powerful laptop with a 14-inch display, Intel Core i7 processor, and NVIDIA MX450 graphics.",
+        "category": "Laptops",
+        "seller": "HP Inc.",
+        "stock": 50,
+        "ratings": 2.0,
+        "images": [
+            {
+                "public_id": "buyitnow/products/hpenvy14_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718425/buyitnow/laptops/81hJrSLyu4L._SL1500__fu5tch.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/hpenvy14_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718425/buyitnow/laptops/csm_HP_ENVY_14_HP_Enhanced_Lighting_feature_6012d1f93e_v6arts.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/hpenvy14_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718423/buyitnow/laptops/download_1_ljak4v.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "LEGO Star Wars Millennium Falcon",
+        "price": 159.99,
+        "description": "Build the iconic Millennium Falcon from the Star Wars series with this LEGO set. Comes with detailed minifigures and functional features.",
+        "category": "Toys",
+        "seller": "LEGO",
+        "stock": 100,
+        "ratings": 1.0,
+        "images": [
+            {
+                "public_id": "buyitnow/products/legomillenniumfalcon_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718969/buyitnow/toys/images_jixk4u.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/legomillenniumfalcon_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718969/buyitnow/toys/images_1_ym3qgh.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/legomillenniumfalcon_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718969/buyitnow/toys/75192_v6adbg.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Barbie Dreamhouse",
+        "price": 199.95,
+        "description": "The Barbie Dreamhouse is a modern and stylish playset featuring multiple rooms, furniture, and accessories for endless imaginative play.",
+        "category": "Toys",
+        "seller": "Mattel",
+        "stock": 50,
+        "ratings": 5.0,
+        "images": [
+            {
+                "public_id": "buyitnow/products/barbiedreamhouse_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718970/buyitnow/toys/633fff3b89a06479957e8ddb-barbie-dreamhouse-dollhouse-with_tibbpt.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/barbiedreamhouse_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718970/buyitnow/toys/images_2_zgmibk.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/barbiedreamhouse_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718970/buyitnow/toys/223900_peeoa3.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Nerf Ultra Two Motorized Blaster",
+        "price": 34.99,
+        "description": "Unleash rapid-fire dart blasting with the Nerf Ultra Two Motorized Blaster. Features high-capacity dart drum and fast reloading.",
+        "category": "Toys",
+        "seller": "Hasbro",
+        "stock": 150,
+        "ratings": 5.0,
+        "images": [
+            {
+                "public_id": "buyitnow/products/nerfultratwo_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718968/buyitnow/toys/81li6jamQ7L._AC_UF350_350_QL80__a3ccfr.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/nerfultratwo_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718970/buyitnow/toys/6e45269ccc687ad856237af62f020a6e6b847af3_31987_i2_iggbbu.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/nerfultratwo_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718970/buyitnow/toys/images_3_faltsh.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Fisher-Price Laugh & Learn Smart Stages Chair",
+        "price": 39.99,
+        "description": "The Fisher-Price Laugh & Learn Smart Stages Chair introduces learning concepts and music to toddlers with interactive play.",
+        "category": "Toys",
+        "seller": "Fisher-Price",
+        "stock": 80,
+        "ratings": 5.0,
+        "images": [
+            {
+                "public_id": "buyitnow/products/fisherpricesmartstages_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718968/buyitnow/toys/61bb1ix9RyL_tcnrje.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/fisherpricesmartstages_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718969/buyitnow/toys/71JxCfn1DYL_dkzgre.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/fisherpricesmartstages_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718968/buyitnow/toys/l90ftcmh1sryth75fnib_60c26b67-fcb6-4763-a6f7-bc9140b0d702_pdtejc.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Hot Wheels Ultimate Garage",
+        "price": 99.95,
+        "description": "The Hot Wheels Ultimate Garage is a massive playset with parking for over 90 cars, thrilling racing tracks, and cool features.",
+        "category": "Toys",
+        "seller": "Mattel",
+        "stock": 40,
+        "ratings": 4.7,
+        "images": [
+            {
+                "public_id": "buyitnow/products/hotwheelsultimategarage_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718969/buyitnow/toys/wakudoebk4gvmlul6q8k_3568e26c-6e94-460f-b078-93ae0ec0cfbf_fotpcv.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/hotwheelsultimategarage_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718969/buyitnow/toys/81SrErCcyuS_gusxlb.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/hotwheelsultimategarage_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718969/buyitnow/toys/71Dqt1wOQHL_rm9oyb.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Microsoft Surface Laptop 4",
+        "price": 1099,
+        "description": "The Microsoft Surface Laptop 4 is a sleek and powerful laptop with a choice of Intel or AMD processors and vibrant PixelSense display.",
+        "category": "Office",
+        "seller": "Microsoft Corporation",
+        "stock": 80,
+        "ratings": 4.8,
+        "images": [
+            {
+                "public_id": "buyitnow/products/surfacelaptop4_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719327/buyitnow/office/download_k64ign.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/surfacelaptop4_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719328/buyitnow/office/download_1_x8ten6.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/surfacelaptop4_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719328/buyitnow/office/microsoft-surface-laptop-4-intel-core-i5-1135g7-21632738224_armkhh.webp"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Herman Miller Aeron Office Chair",
+        "price": 999,
+        "description": "The Herman Miller Aeron Office Chair is an ergonomic masterpiece with adjustable features and premium comfort for long work sessions.",
+        "category": "Office",
+        "seller": "Herman Miller Inc.",
+        "stock": 30,
+        "ratings": 4.9,
+        "images": [
+            {
+                "public_id": "buyitnow/products/hermanmilleraeron_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719328/buyitnow/office/71VVk7m8aIL._AC_UF894_1000_QL80__d6sql9.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/hermanmilleraeron_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719329/buyitnow/office/it_prd_ovw_aeron_chair_03.gif.rendition.1600.1600_tzcrci.gif"
+            },
+            {
+                "public_id": "buyitnow/products/hermanmilleraeron_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719328/buyitnow/office/download_2_yufwab.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Canon PIXMA Pro-100 Printer",
+        "price": 299,
+        "description": "The Canon PIXMA Pro-100 is a professional-grade printer for photographers and designers, delivering high-quality prints up to 13x19 inches.",
+        "category": "Office",
+        "seller": "Canon Inc.",
+        "stock": 50,
+        "ratings": 4.7,
+        "images": [
+            {
+                "public_id": "buyitnow/products/canonpixmapro100_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719328/buyitnow/office/71Aidih2F_L._AC_SL1500__dp7l2d.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/canonpixmapro100_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719329/buyitnow/office/canon-pixma-pro-100s_1_borvpy.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/canonpixmapro100_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719328/buyitnow/office/download_3_fa7r1q.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Logitech MX Master 3 Mouse",
+        "price": 99.99,
+        "description": "The Logitech MX Master 3 is a premium wireless mouse with customizable buttons and a precision scroll wheel for efficient productivity.",
+        "category": "Office",
+        "seller": "Logitech International S.A.",
+        "stock": 100,
+        "ratings": 4.8,
+        "images": [
+            {
+                "public_id": "buyitnow/products/logitechmxmaster3_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719327/buyitnow/office/mx-master-3-mild-grey-3-4-front-500x500-1_hrbno8.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/logitechmxmaster3_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719329/buyitnow/office/614w3LuZTYL._AC_SL1500__c5rs2q.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/logitechmxmaster3_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719327/buyitnow/office/4127-72278_qse0wu.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "IKEA Alex Desk",
+        "price": 249,
+        "description": "The IKEA Alex Desk offers ample storage space and a clean, minimalist design, perfect for creating an organized and stylish workspace.",
+        "category": "Office",
+        "seller": "IKEA",
+        "stock": 60,
+        "ratings": 4.6,
+        "images": [
+            {
+                "public_id": "buyitnow/products/ikeaalexdesk_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719327/buyitnow/office/lagkapten-alex-desk-dark-grey-white__1028404_pe835340_s5_nrhnpq.avif"
+            },
+            {
+                "public_id": "buyitnow/products/ikeaalexdesk_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719327/buyitnow/office/download_5_esmzlj.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/ikeaalexdesk_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719327/buyitnow/office/download_5_esmzlj.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Dyson Supersonic Hair Dryer",
+        "price": 399.99,
+        "description": "The Dyson Supersonic Hair Dryer is a revolutionary hair tool that dries hair quickly while minimizing heat damage.",
+        "category": "Beauty",
+        "seller": "Dyson Ltd.",
+        "stock": 50,
+        "ratings": 4.9,
+        "images": [
+            {
+                "public_id": "buyitnow/products/dysonhairdryer_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719781/buyitnow/Beauty/cropped-1Z7A9729-scaled-1_ildpij.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/dysonhairdryer_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719781/buyitnow/Beauty/download_tr6dxp.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/dysonhairdryer_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719782/buyitnow/Beauty/dyson-supersonic-hair-dryer-black-friday-tout-5fd53d25450a4284b646c12a1240f04f_ataxmb.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Fenty Beauty Pro Filt'r Soft Matte Foundation",
+        "price": 34,
+        "description": "The Fenty Beauty Pro Filt'r Soft Matte Foundation offers a wide range of shades and a long-lasting, smooth finish.",
+        "category": "Beauty",
+        "seller": "Fenty Beauty by Rihanna",
+        "stock": 150,
+        "ratings": 4.7,
+        "images": [
+            {
+                "public_id": "buyitnow/products/fentyfoundation_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719782/buyitnow/Beauty/3281521_c04udm.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/fentyfoundation_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719782/buyitnow/Beauty/41HP5C-sQPL_zd0zb3.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/fentyfoundation_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719781/buyitnow/Beauty/644807_100_1_1_fufqij.webp"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Glossier Boy Brow",
+        "price": 16,
+        "description": "The Glossier Boy Brow is a cult-favorite brow gel that shapes and thickens eyebrows for a natural, fuller look.",
+        "category": "Beauty",
+        "seller": "Glossier Inc.",
+        "stock": 100,
+        "ratings": 4.8,
+        "images": [
+            {
+                "public_id": "buyitnow/products/glossierboybrow_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719782/buyitnow/Beauty/41Mqc8_Sx3L._AC_UF1000_1000_QL80__xrm9n8.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/glossierboybrow_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719782/buyitnow/Beauty/510njOvVNzL_lel2lt.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/glossierboybrow_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719780/buyitnow/Beauty/41Mqc8_Sx3L._AC_UF1000_1000_QL80__1_bfg07l.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Tatcha The Water Cream",
+        "price": 68,
+        "description": "Tatcha The Water Cream is a lightweight and oil-free moisturizer that hydrates and refines skin texture.",
+        "category": "Beauty",
+        "seller": "Tatcha LLC",
+        "stock": 80,
+        "ratings": 4.6,
+        "images": [
+            {
+                "public_id": "buyitnow/products/tatchawatercream_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719780/buyitnow/Beauty/Tatcha-The-Water-Cream-MINI-600x600_oittxc.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/tatchawatercream_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719780/buyitnow/Beauty/i-027984-the-water-cream-50ml-7-3-940_nu84pa.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/tatchawatercream_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719780/buyitnow/Beauty/download_1_ftudsq.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Morphe x James Charles Artistry Palette",
+        "price": 39,
+        "description": "The Morphe x James Charles Artistry Palette features a vibrant range of eyeshadows for creative and bold makeup looks.",
+        "category": "Beauty",
+        "seller": "Morphe Brushes",
+        "stock": 60,
+        "ratings": 4.7,
+        "images": [
+            {
+                "public_id": "buyitnow/products/morphejamescharlespalette_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719781/buyitnow/Beauty/Morphe-Color-Eye-shadow-Palette-buy-bd-1_dc6ujp.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/morphejamescharlespalette_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719781/buyitnow/Beauty/download_3_vf3lkn.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/morphejamescharlespalette_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690719781/buyitnow/Beauty/download_2_awmjgg.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Nike Men's Home Stadium Jersey",
+        "price": 89.99,
+        "description": "The Nike Men's Home Stadium Jersey is the official home jersey of a popular soccer team, featuring Dri-FIT technology for comfort and performance.",
+        "category": "Jersey",
+        "seller": "Nike, Inc.",
+        "stock": 100,
+        "ratings": 4.9,
+        "images": [
+            {
+                "public_id": "buyitnow/products/nikehomestadiumjersey_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720140/buyitnow/jersey/dm1843-1193_s2q9bs.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/nikehomestadiumjersey_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720139/buyitnow/jersey/lfc-nike-mens-home-stadium-jersey-2021-23999_mnm3yw.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/nikehomestadiumjersey_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720135/buyitnow/jersey/M_DM1843_609_V1_CT_pnmefq.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Adidas Women's Away Soccer Jersey",
+        "price": 79.95,
+        "description": "The Adidas Women's Away Soccer Jersey is a stylish and comfortable jersey designed for high-performance on the field.",
+        "category": "Jersey",
+        "seller": "Adidas AG",
+        "stock": 80,
+        "ratings": 4.8,
+        "images": [
+            {
+                "public_id": "buyitnow/products/adidaswomensawayjersey_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720135/buyitnow/jersey/Spain_Womens_Team_23_Away_Jersey_Blue_HT4314_21_model_j0vbjd.avif"
+            },
+            {
+                "public_id": "buyitnow/products/adidaswomensawayjersey_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720135/buyitnow/jersey/Colombia_Womens_Team_23_Away_Jersey_Multicolor_HS7543_21_model_sgdvkk.avif"
+            },
+            {
+                "public_id": "buyitnow/products/adidaswomensawayjersey_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720136/buyitnow/jersey/germany-womens-team-23-away-authentic-jersey-62884-1_fkbm9s.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Under Armour Youth Football Jersey",
+        "price": 34.95,
+        "description": "The Under Armour Youth Football Jersey is designed for young athletes and provides comfort and mobility on the field.",
+        "category": "Jersey",
+        "seller": "Under Armour, Inc.",
+        "stock": 70,
+        "ratings": 4.7,
+        "images": [
+            {
+                "public_id": "buyitnow/products/underarmouryouthfootballjersey_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720138/buyitnow/jersey/71pUfkg6UVL._AC_UY1100__mahond.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/underarmouryouthfootballjersey_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720136/buyitnow/jersey/71IUHDtviFL._SLDPMOBCAROUSELAUTOCROP288221_MCnd_AC_SR462_693__wvspcf.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/underarmouryouthfootballjersey_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720136/buyitnow/jersey/download_cl2gtq.jpg"
+            }
+        ],
+        "reviews": []
+    },
+    {
+        "name": "Reebok NHL Men's Replica Jersey",
+        "price": 129.99,
+        "description": "The Reebok NHL Men's Replica Jersey allows fans to support their favorite hockey team with an authentic replica jersey.",
+        "category": "Jersey",
+        "seller": "Reebok International Ltd.",
+        "stock": 60,
+        "ratings": 4.9,
+        "images": [
+            {
+                "public_id": "buyitnow/products/reeboknhlreplicajersey_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720139/buyitnow/jersey/download_2_skztyy.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/reeboknhlreplicajersey_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720139/buyitnow/jersey/download_3_dcysvu.jpg"
+            },
+            {
+                "public_id": "buyitnow/products/reeboknhlreplicajersey_2",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690720138/buyitnow/jersey/download_1_hhggg8.jpg"
+            }
+        ],
+        "reviews": []
+    }
+]

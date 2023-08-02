@@ -282,9 +282,8 @@ const Filters = () => {
       >
         Filter by
       </a>
-      {/* Filters container */}
+
       <div className="md:block px-6 py-4 border border-gray-200 bg-white rounded shadow-sm">
-        {/* Price filter */}
         <h3 className="font-semibold mb-2">Price ($)</h3>
         <div className="grid md:grid-cols-3 gap-x-2">
           <div className="mb-4">
@@ -389,6 +388,19 @@ const Filters = () => {
                 onClick={(e) => handleClick(e.target)}
               />
               <span className="ml-2 text-gray-500"> Beauty </span>
+            </label>
+          </li>
+          <li>
+            <label className="flex items-center">
+              <input
+                name="category"
+                type="checkbox"
+                value="Jersey"
+                className="h-4 w-4"
+                defaultChecked={checkHandler("category", "Jersey")}
+                onClick={(e) => handleClick(e.target)}
+              />
+              <span className="ml-2 text-gray-500"> Jersey </span>
             </label>
           </li>
         </ul>

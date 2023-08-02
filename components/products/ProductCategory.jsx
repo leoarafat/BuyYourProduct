@@ -13,15 +13,16 @@ import "./ProductCat.Module.css";
 import axios from "axios";
 import Link from "next/link";
 
-export const getProducts = async () => {
-  const { data } = await axios.get(`${process.env.API_URL}/api/products`);
+export const getItemProducts = async () => {
+  const { data } = await axios.get(`${process.env.API_URL}/api/category`);
   return data;
 };
 
 const ProductCategory = async () => {
-  const productCategories = await getProducts();
+  const productCategories = await getItemProducts();
+
   // const cardWidth = 450;
-  const cardHeight = 500;
+  const cardHeight = 300;
   return (
     <Box
       style={{
@@ -33,7 +34,7 @@ const ProductCategory = async () => {
         Our Product Categories
       </Typography>
       <Grid container spacing={3} mt={4}>
-        {productCategories?.products?.map((category) => (
+        {productCategories?.category?.map((category) => (
           <Grid item key={category.id} xs={12} sm={6} md={4} lg={3}>
             <Link href={`/all-products`}>
               <Card
@@ -49,8 +50,8 @@ const ProductCategory = async () => {
                     className="Card-media"
                     component="img"
                     style={{
-                      height: "100%",
-                      width: "100%",
+                      height: "250px",
+                      width: "300px",
                       objectFit: "contain",
                     }}
                     src={
@@ -58,6 +59,7 @@ const ProductCategory = async () => {
                     }
                     alt={category.name}
                   />
+
                   <CardContent>
                     <Typography
                       variant="h5"
@@ -67,7 +69,7 @@ const ProductCategory = async () => {
                         fontWeight: 600,
                       }}
                     >
-                      {category.category}
+                      {category.name}
                     </Typography>
                   </CardContent>
                 </CardActionArea>

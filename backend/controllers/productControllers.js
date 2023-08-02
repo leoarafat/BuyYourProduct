@@ -3,6 +3,7 @@ import APIFilters from "../utils/APIFilters";
 import { cloudinary, uploads } from "../utils/cloudinary";
 import fs from "fs";
 import ErrorHandler from "../utils/errorHandler";
+import Category from "../models/category";
 
 export const newProduct = async (req, res, next) => {
   try {
@@ -17,7 +18,17 @@ export const newProduct = async (req, res, next) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
-
+export const getAllProducts = async (req, res) => {
+  try {
+    const products = await Product.find().limit(8);
+    res.status(200).json({
+      products,
+    });
+  } catch (error) {
+    console.error("Error fetching product:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
 export const getProducts = async (req, res, next) => {
   try {
     const resPerPage = 5;
@@ -184,6 +195,17 @@ export const createProductReview = async (req, res, next) => {
     });
   } catch (error) {
     console.error("Error creating product review:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+export const getCategory = async (req, res) => {
+  try {
+    const category = await Category.find();
+    res.status(200).json({
+      category,
+    });
+  } catch (error) {
+    console.error("Error fetching Category:", error);
     res.status(500).json({ message: "Internal Server Error" });
   }
 };

@@ -68,7 +68,7 @@ const Navbar = () => {
   ];
 
   return (
-    <>
+    <div style={{ marginBottom: "5px" }}>
       <AppBar position="static" color={"primary"}>
         <Toolbar>
           {isXs || isSm ? (
@@ -161,7 +161,7 @@ const Navbar = () => {
           </List>
         </div>
       </Drawer>
-    </>
+    </div>
   );
 };
 

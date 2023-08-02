@@ -1,0 +1,56 @@
+[
+    {
+        "name": "Electronics",
+        "images": [
+            {
+                "public_id": "buyitnow/products/iphon fghe13pro_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690975701/buyitnow/category/360_F_235844454_RTTLpnm2asRdwNJ97MU0ENJqnCSUdXQv_mwmpsp.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Laptops",
+        "images": [
+            {
+                "public_id": "buyitnow/products/iphone13pro_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690718425/buyitnow/laptops/dmitry-spravko-tl56qAl9STg-unsplash_ajj35h.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Toys",
+        "images": [
+            {
+                "public_id": "buyitnow/products/iphone13pro_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690975937/buyitnow/category/360_F_324422176_Lgn7NTeFyNaUKIDu0Ppls1u8zb8wsKS4_tyw1my.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Office",
+        "images": [
+            {
+                "public_id": "buyitnow/products/iphone13pro_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690975938/buyitnow/category/toa-heftiba-FV3GConVSss-unsplash_1_hac0vm.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Beauty",
+        "images": [
+            {
+                "public_id": "buyitnow/products/iphone13pro_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690975939/buyitnow/category/raphael-lovaski-Pe9IXUuC6QU-unsplash_rmciaf.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Jersey",
+        "images": [
+            {
+                "public_id": "buyitnow/products/iphone13pro_1",
+                "url": "https://res.cloudinary.com/drvbqmqfn/image/upload/v1690975967/buyitnow/category/cristian-tarzi-a4dzhFKke54-unsplash_tntflp.jpg"
+            }
+        ]
+    }
+]
