@@ -1,11 +1,8 @@
 import getRawBody from "raw-body";
 import Stripe from "stripe";
-import Order from "../models/order";
 import APIFilters from "../utils/APIFilters";
 import ErrorHandler from "../utils/errorHandler";
-import fs from "fs"; // Import the fs module for file handling
-import User from "../models/user"; // Import the User model
-import { uploads } from "../utils/cloudinary"; // Import the cloudinary upload function
+import Order from "../models/order";
 
 const stripe = new Stripe(process.env.STRIPE_PRIVATE_KEY);
 
@@ -150,7 +147,7 @@ export const checkoutSession = async (req, res) => {
           },
           unit_amount: item.price * 100,
         },
-        tax_rates: ["txr_1NWjiBDhs9jrqdoDcIEqd6Ez"],
+        tax_rates: ["txr_1Nay9TDhs9jrqdoDLbZExc1E"],
         quantity: item.quantity,
       };
     });
@@ -167,7 +164,7 @@ export const checkoutSession = async (req, res) => {
       metadata: { shippingInfo },
       shipping_options: [
         {
-          shipping_rate: "shr_1NWXJtDhs9jrqdoDg67WlIdM",
+          shipping_rate: "shr_1Nay7pDhs9jrqdoDUSQiqUtj",
         },
       ],
       line_items,
@@ -222,7 +219,7 @@ export const webhook = async (req, res) => {
       const line_items = await stripe.checkout.sessions.listLineItems(
         event.data.object.id
       );
-
+      // console.log(line_items);
       const orderItems = await getCartItems(line_items);
       const userId = session.client_reference_id;
       const amountPaid = session.amount_total / 100;

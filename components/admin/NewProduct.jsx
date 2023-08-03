@@ -23,11 +23,11 @@ const NewProduct = () => {
 
   const categories = [
     "Electronics",
-    "Cameras",
     "Laptops",
-    "Accessories",
-    "Headphones",
-    "Sports",
+    "Toys",
+    "Office",
+    "Beauty",
+    "Jersey",
   ];
 
   const submitHandler = (e) => {

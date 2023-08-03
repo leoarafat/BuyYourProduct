@@ -2,8 +2,8 @@ import axios from "axios";
 import React from "react";
 
 import { cookies } from "next/headers";
-import ListOrders from "@/components/orders/ListOrders";
 import queryString from "query-string";
+import ListOrders from "@/components/orders/ListOrders";
 
 const getOrders = async (searchParams) => {
   const nextCookies = cookies();

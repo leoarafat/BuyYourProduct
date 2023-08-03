@@ -8,6 +8,6 @@ const router = createRouter();
 
 dbConnect();
 
-handler.use(isAuthenticatedUser).put(createProductReview);
+router.use(isAuthenticatedUser).put(createProductReview);
 
-export default handler;
+export default router.handler({ onError });

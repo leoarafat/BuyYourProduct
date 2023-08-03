@@ -52,7 +52,6 @@ export const CartProvider = ({ children }) => {
       newCartItems = cart?.cartItems?.map((i) =>
         i.product === isItemExist.product ? item : i
       );
-      toast.error("Already Added");
     } else {
       newCartItems = [...(cart?.cartItems || []), item];
       toast.success("Product Added");

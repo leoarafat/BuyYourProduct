@@ -1,12 +1,14 @@
 "use client";
 
 import React, { useContext, useEffect } from "react";
-import OrderItem from "./OrderItem";
+
 import CustomPagination from "../layouts/CustomPagination";
 import CartContext from "@/context/CartContext";
 import { useSearchParams, useRouter } from "next/navigation";
+import OrderItem from "./OrderItem";
 
 const ListOrders = ({ orders }) => {
+  console.log(orders.orders);
   const { clearCart } = useContext(CartContext);
   const params = useSearchParams();
   const router = useRouter();
