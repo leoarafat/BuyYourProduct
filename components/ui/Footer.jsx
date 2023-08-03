@@ -22,10 +22,10 @@ const Footer = () => {
       <Grid container alignItems="center" justify="center" spacing={2}>
         <Grid item xs={12} sm={4} md={3}>
           <Typography variant="h6" style={{ marginBottom: "16px" }}>
-            BTechTrove
+            BudgetBazaar
           </Typography>
           <Typography variant="body2">
-            Discover the Future of Technology at TechTrove.
+            Discover the Future of Technology at BudgetBazaar.
           </Typography>
         </Grid>
         <Grid item xs={12} sm={4} md={3}>

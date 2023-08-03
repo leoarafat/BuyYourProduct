@@ -6,7 +6,7 @@ import ListProducts from "@/components/products/ListProduct";
 import Header from "@/components/layouts/Header";
 
 export const metadata = {
-  title: "TechTrove",
+  title: "BudgetBazaar",
 };
 
 const getProducts = async (searchParams) => {

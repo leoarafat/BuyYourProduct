@@ -20,7 +20,7 @@ export const getFeaturedProduct = async () => {
 };
 const FeatureProducts = async () => {
   const featureProducts = await getFeaturedProduct();
-  console.log(featureProducts.products);
+
   const cardHeight = 450;
   return (
     <div>
@@ -51,8 +51,7 @@ const FeatureProducts = async () => {
                       component="img"
                       style={{
                         height: "250px",
-                        width: "300px",
-                        objectFit: "contain",
+                        width: "100%",
                       }}
                       src={
                         product?.images[0]?.url || "/images/default_product.png"
@@ -87,13 +86,14 @@ const FeatureProducts = async () => {
                       >
                         Stock: {product.stock}
                       </Typography>
+
                       <Typography
                         variant="body1"
                         style={{
                           marginBottom: "0.5rem",
                         }}
                       >
-                        Rating:{" "}
+                        Rating:
                         <Rating
                           value={product?.ratings}
                           precision={0.5}

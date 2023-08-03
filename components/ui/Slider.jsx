@@ -83,10 +83,10 @@ export default function Slider() {
             <div className="relative">
               <img src={slide.imageSrc} alt={slide.title} />
               <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50">
-                <div className="p-4 text-white font-bold">
+                {/* <div className="p-4 text-white font-bold">
                   <h3 className="text-2xl font-bold mt-72">{slide.title}</h3>
                   <p className="text-lg">{slide.description}</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </SwiperSlide>

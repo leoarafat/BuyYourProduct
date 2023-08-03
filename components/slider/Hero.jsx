@@ -11,12 +11,14 @@ const Hero = () => {
       ></div>
       <div class="relative lg:flex lg:items-center lg:gap-12">
         <div class="text-center lg:text-left md:mt-12 lg:mt-0 sm:w-10/12 md:w-2/3 sm:mx-auto lg:mr-auto lg:w-6/12">
-          <h1 class="text-gray-900 font-bold text-4xl md:text-6xl lg:text-5xl xl:text-6xl dark:text-white">
+          <h1 class="text-gray-900 font-bold text-4xl md:text-6xl lg:text-5xl xl:text-6xl ">
             Discover the Future of Technology at{" "}
-            <span class="text-primary dark:text-primaryLight">TechTrove.</span>
+            <span class="text-primary dark:text-primaryLight">
+              BudgetBazaar.
+            </span>
           </h1>
-          <p class="mt-8 text-gray-600 dark:text-gray-300">
-            TechTrove is your gateway to the latest and most innovative tech
+          <p class="mt-8 text-gray-600 ">
+            BudgetBazaar is your gateway to the latest and most innovative tech
             products and gadgets. Explore a world of cutting-edge technology and
             find the perfect tools to elevate your digital lifestyle. Our
             experts are here to support you in building the future, one tech

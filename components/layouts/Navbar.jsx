@@ -1,55 +1,17 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
-import Link from "next/link";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-  Drawer,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Badge,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import HomeIcon from "@mui/icons-material/Home";
-
-import CategoryIcon from "@mui/icons-material/Category";
-import LoginIcon from "@mui/icons-material/Login";
-import LogoutIcon from "@mui/icons-material/Logout";
 import AuthContext from "@/context/AuthContext";
-import { useSession, signOut } from "next-auth/react";
 import CartContext from "@/context/CartContext";
+import { Badge, IconButton } from "@mui/material";
+import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
+import { useContext, useEffect } from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-
+import Link from "next/link";
 const Navbar = () => {
   const { user, setUser } = useContext(AuthContext);
   const { data } = useSession();
   const { cart } = useContext(CartContext);
   const cartItems = cart?.cartItems;
-
-  const [drawerOpen, setDrawerOpen] = useState(false);
-  const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down("xs"));
-  const isSm = useMediaQuery(theme.breakpoints.between("xs", "sm", "md"));
-  const isLg = useMediaQuery(theme.breakpoints.up("lg"));
-
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-
-    setDrawerOpen(open);
-  };
 
   const handleLogout = async () => {
     await signOut();
@@ -60,108 +22,162 @@ const Navbar = () => {
       setUser(data?.user);
     }
   }, [data]);
-
-  const navItems = [
-    { text: "Home", icon: <HomeIcon />, path: "/" },
-    { text: "Products", icon: <CategoryIcon />, path: "/all-products" },
-    { text: "Login", icon: <LoginIcon />, path: "/login" },
-  ];
-
   return (
-    <div style={{ marginBottom: "5px" }}>
-      <AppBar position="static" color={"primary"}>
-        <Toolbar>
-          {isXs || isSm ? (
-            <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              onClick={toggleDrawer(true)}
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-          ) : (
-            <>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                <Link href={"/"}>TechTrove</Link>
-              </Typography>
-              <List
-                component="nav"
-                aria-labelledby="main navigation"
-                sx={{ display: isLg ? "flex" : "none" }}
-              >
-                {navItems.map((item) => (
-                  <Link href={item.path} key={item.text}>
-                    <ListItem button component="a">
-                      <ListItemIcon>{item.icon}</ListItemIcon>
-                      <ListItemText primary={item.text} />
-                    </ListItem>
-                  </Link>
-                ))}
-              </List>
-
-              {(isSm || !user) && (
-                <Link href="/login">
-                  <Button color="inherit">
-                    <LoginIcon />
-                    Login
-                  </Button>
-                </Link>
-              )}
-              {user && (
-                <Button color="inherit" onClick={handleLogout}>
-                  <LogoutIcon />
-                  Logout
-                </Button>
-              )}
-              {user && (
-                <Link href="/me">
-                  <img
-                    className="w-10 h-10 rounded-full"
-                    src={
-                      user?.avatar ? user?.avatar?.url : "/images/default.png"
-                    }
-                  />
-                </Link>
-              )}
-            </>
-          )}
-          <Link href={"/cart"}>
-            <IconButton color="inherit">
-              <Badge badgeContent={cartItems?.length || 0} color="error">
-                <ShoppingCartIcon />
-              </Badge>
-            </IconButton>
-          </Link>
-        </Toolbar>
-      </AppBar>
-
-      <Drawer
-        anchor="left"
-        open={drawerOpen}
-        onClose={toggleDrawer(false)}
-        variant={isLg ? "permanent" : "temporary"}
-        sx={{ display: isXs || isSm ? "block" : "none" }}
-      >
-        <div
-          role="presentation"
-          onClick={toggleDrawer(false)}
-          onKeyDown={toggleDrawer(false)}
-        >
-          <List>
-            {navItems.map((item) => (
-              <Link href={item.path} key={item.text}>
-                <ListItem button component="a">
-                  <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.text} />
-                </ListItem>
+    <nav class="w-full bg-[#3f51b5]">
+      <div class="container m-auto px-6 md:px-12 lg:px-7">
+        <div class="flex flex-wrap items-center justify-between py-6 gap-6 md:py-4 md:gap-0 relative">
+          <input
+            type="checkbox"
+            name="toggle_nav"
+            id="toggle_nav"
+            class="peer hidden"
+          />
+          <div class="w-full flex justify-between md:w-max md:px-0">
+            <a href="#" aria-label="logo">
+              <Link href="/">
+                <p className="font-bold text-xl text-gray-300">BudgetBazaar</p>
               </Link>
-            ))}
-          </List>
+            </a>
+
+            <div class="flex items-center md:hidden max-h-10">
+              <label
+                role="button"
+                for="toggle_nav"
+                aria-label="humburger"
+                id="hamburger"
+                class="relative z-40 px-2 py-3 sm:-mr-6"
+              >
+                <div
+                  id="line"
+                  class="m-auto h-0.5 w-6 rounded bg-gray-300 transition duration-300"
+                ></div>
+                <div
+                  id="line2"
+                  class="m-auto mt-2 h-0.5 w-6 rounded bg-gray-300 transition duration-300"
+                ></div>
+              </label>
+            </div>
+          </div>
+
+          <label
+            role="button"
+            for="toggle_nav"
+            class="fixed w-full z-30 h-full top-0 left-0 bg-gray-700 bg-opacity-40 hidden peer-checked:block md:peer-checked:hidden"
+          ></label>
+
+          <div
+            class="flex z-50 flex-col md:flex-row justify-between 
+            items-center gap-y-4 p-6 bg-[#263238] md:w-8/12 
+            md:gap-y-4 md:p-0 
+            md:bg-transparent lg:w-7/12 fixed top-0 -left-full transition-all duration-500 peer-checked:left-0 max-w-sm h-full 
+            md:left-0 md:h-auto w-4/5 md:max-w-none md:relative lg:first-letter:top-0"
+          >
+            <div class="flex md:hidden w-full pb-5">
+              <a href="#" aria-label="logo">
+                <p className="font-bold text-xl text-gray-300">BudgetBazaar</p>
+              </a>
+            </div>
+            <div class="block w-full h-full md:h-auto">
+              <ul class="space-y-8 tracking-wide font-medium md:flex md:space-y-0">
+                <li>
+                  <a href="#" class="block md:px-3">
+                    <Link href="/">
+                      <div
+                        class="relative text-gray-300
+                                            before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800"
+                      >
+                        <span>Home</span>
+                      </div>
+                    </Link>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="block md:px-3 group">
+                    <Link href="/all-products">
+                      <div
+                        class="relative text-gray-600
+                                            before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                      >
+                        <span class="transition group-hover:text-yellow-300 text-gray-300 dark:group-hover:text-yellow-300">
+                          Products
+                        </span>
+                      </div>
+                    </Link>
+                  </a>
+                </li>
+                <li>
+                  <a class="block md:px-3 group">
+                    <div
+                      class="relative text-gray-600
+                                            before:absolute before:-inset-2 before:w-full before:h-0.5 before:origin-left dark:before:bg-yelloe-500 before:mx-auto before:mt-auto before:rounded-full before:bg-yellow-800 before:transition before:scale-x-0 group-hover:before:scale-x-100"
+                    >
+                      <span class="transition group-hover:text-yellow-300 text-gray-300 dark:group-hover:text-yellow-300">
+                        <Link href={"/cart"}>
+                          <IconButton className="" color="inherit">
+                            <Badge
+                              badgeContent={cartItems?.length || 0}
+                              color="error"
+                            >
+                              <ShoppingCartIcon />
+                            </Badge>
+                          </IconButton>
+                        </Link>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="w-full gap-y-4 md:w-max md:gap-y-0 md:gap-x-4 flex md:flex-row ">
+              {data?.user ? (
+                <button
+                  onClick={handleLogout}
+                  type="button"
+                  title="Logout"
+                  class="group w-full py-3 px-6 text-center transition dark:active:bg-yellow-800 dark:focus:bg-yellow-900 active:bg-yellow-200 focus:bg-yellow-100 sm:w-max"
+                >
+                  <span class="block text-gray-300 font-semibold group-focus:text-yellow-300 dark:group-focus:text-yellow-100">
+                    Logout
+                  </span>
+                </button>
+              ) : (
+                <>
+                  {" "}
+                  <Link href="/login">
+                    <button
+                      type="button"
+                      title="Start buying"
+                      class="group w-full py-3 px-6 text-center transition dark:active:bg-yellow-800 dark:focus:bg-yellow-900 active:bg-yellow-200 focus:bg-yellow-100 sm:w-max"
+                    >
+                      <span class="block text-gray-300 font-semibold group-focus:text-yellow-300 dark:group-focus:text-yellow-100">
+                        Login
+                      </span>
+                    </button>
+                  </Link>
+                </>
+              )}
+              {data?.user && (
+                <Link href="/me">
+                  <button
+                    type="button"
+                    title="Start buying"
+                    class="w-full  md:w-max"
+                  >
+                    <img
+                      className="w-10 h-10 rounded-full"
+                      src={
+                        user?.avatar ? user?.avatar?.url : "/images/default.png"
+                      }
+                    />
+                  </button>
+                </Link>
+              )}
+            </div>
+          </div>
         </div>
-      </Drawer>
-    </div>
+      </div>
+    </nav>
   );
 };
 

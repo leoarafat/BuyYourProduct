@@ -59,7 +59,7 @@ export default async function auth(req, res) {
       },
     },
     pages: {
-      signIn: "/login",
+      signIn: `${process.env.API_URL}/login`,
     },
     secret: process.env.NEXTAUTH_SECRET,
   });

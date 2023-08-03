@@ -12,6 +12,7 @@ import {
 import "./ProductCat.Module.css";
 import axios from "axios";
 import Link from "next/link";
+import Image from "next/image";
 
 export const getItemProducts = async () => {
   const { data } = await axios.get(`${process.env.API_URL}/api/category`);
@@ -51,8 +52,7 @@ const ProductCategory = async () => {
                     component="img"
                     style={{
                       height: "250px",
-                      width: "300px",
-                      objectFit: "contain",
+                      width: "100%",
                     }}
                     src={
                       category?.images[0]?.url || "/images/default_product.png"
