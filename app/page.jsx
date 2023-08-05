@@ -7,12 +7,14 @@ import UserReviewSlider from "@/components/ui/UserReview";
 import Sponsorship from "@/components/ui/SponserShip";
 import Contact from "@/components/ui/Contact";
 import FeatureProducts from "@/components/products/FeatureProducts";
+import Services from "@/components/ui/Services";
 
 const HomePage = () => {
   return (
     <>
       <Slider />
       <Hero />
+      <Services />
       <ProductCategory />
       <FeatureProducts />
       <Sponsorship />

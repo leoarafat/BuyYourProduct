@@ -162,14 +162,9 @@ const Navbar = () => {
                   <button
                     type="button"
                     title="Start buying"
-                    class="w-full  md:w-max"
+                    class="w-full py-3 px-6 text-center transition dark:bg-gray-700 bg-gray-900 hover:bg-gray-800 active:bg-gray-700 focus:bg-gray-800 md:w-max"
                   >
-                    <img
-                      className="w-10 h-10 rounded-full"
-                      src={
-                        user?.avatar ? user?.avatar?.url : "/images/default.png"
-                      }
-                    />
+                    <span class="block text-white font-semibold">Profile</span>
                   </button>
                 </Link>
               )}
